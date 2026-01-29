@@ -6,7 +6,7 @@ Segment Any Events with Language</h1>
     <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a><sup></sup> <br>
     Department of Computer Science, National University of Singapore<br>
   </p>
-  <h2 align="center">CVPR 2025</h2>
+  <h2 align="center">ICLR 2026</h2>
   <h3 align="center"><a href="https://github.com/0nandon/SEAL">Code</a> | <a href="">Paper</a> | <a href="https://0nandon.github.io/SEAL/">Project Page</a> </h3>
   <div align="center">
   <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
