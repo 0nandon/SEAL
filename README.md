@@ -14,6 +14,16 @@ Segment Any Events with Language</h1>
   </div>
 </p>
 
+<p align="center">
+  <a href="">
+    <img src="https://github.com/0nandon/SEAL/blob/main/static/teaser.png" alt="Logo" width="100%">
+  </a>
+</p>
+<p align="center">
+Our <strong>SEAL</strong> is the first Semantic-aware Segment Any Events. 
+</p>
+</p>
+
 
 <details open="open" style='padding: 10px; border-radius:5px 30px 30px 5px; border-style: solid; border-width: 1px;'>
   <summary>Table of Contents</summary>
