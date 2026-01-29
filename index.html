@@ -54,7 +54,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <div class="has-text-centered" style="margin-bottom: 0rem;">
+          <div class="has-text-centered" style="margin-bottom: -2rem;">
           <img src="static/images/logo_white.png"
            alt="SEAL logo"
            style="max-height: 200px; width: auto;">
@@ -105,12 +105,14 @@
                   </a>
               </span>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
+  <h2 class="subtitle has-text-centered" style="margin-bottom: 5rem; margin-top: -2rem;">
+  <strong>SEAL</strong> is the <strong>first</strong> Semantic-aware Segment Any Events model!
+  </h2>
 </section>
 
 <section class="hero teaser">
@@ -121,95 +123,138 @@
       <!-- Affordances 1 -->
       <div class="column">
         <div class="content"> 
-          <img src="static/images/sink.png" class="interpolation-image">
+          <img src="static/images/teaser/teaser1_rgb.pdf" class="interpolation-image">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content"> 
+          <img src="static/images/teaser/teaser1_events1.pdf" class="interpolation-image">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content"> 
+          <img src="static/images/teaser/teaser1_events2.pdf" class="interpolation-image">
+        </div>
+      </div>
+      </div>
+      <br>
+      <h2 class="subtitle has-text-centered" style="margin-top: -2rem;">
+      Given the <strong>box prompts</strong>, our SEAL output both instance-level mask and open-vocabulary semantics.
+    </h2>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+
+      <!-- Affordances 1 -->
+      <div class="column">
+        <div class="content"> 
+          <img src="static/images/teaser/teaser2_rgb.pdf" class="interpolation-image">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content"> 
+          <img src="static/images/teaser/teaser2_events1.pdf" class="interpolation-image">
+        </div>
+      </div>
+      <div class="column">
+        <div class="content"> 
+          <img src="static/images/teaser/teaser2_events2.pdf" class="interpolation-image">
+        </div>
+      </div>
+      </div>
+      <br>
+      <h2 class="subtitle has-text-centered" style="margin-top: -2rem;">
+      Given a <strong>point prompt</strong>, our SEAL recognizes and classifies both instance-level and part-level masks.
+    </h2>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+
+      <!-- Affordances 1 -->
+      <div class="column">
+        <div class="content"> 
+          <video autoplay loop muted>
+                <source src="./static/images/teaser/teaser3_vid1.mp4" type="video/mp4">
+            </video>
             <center>
             <p>
-              <i>Where can I wash my hands?</i>
+              Class-agnostic object detection
             </p>
           </center>
         </div>
       </div>
       <div class="column">
         <div class="content"> 
-          <img src="static/images/desktop.png" class="interpolation-image">
+          <video autoplay loop muted>
+                <source src="./static/images/teaser/teaser3_vid2.mp4" type="video/mp4">
+            </video>
             <center>
             <p>
-              <i>Device to play game.</i>
+              <i>I wanna drive.</i>
             </p>
           </center>
         </div>
       </div>
       <div class="column">
         <div class="content"> 
-          <img src="static/images/toilet.png" class="interpolation-image">
+          <video autoplay loop muted>
+                <source src="./static/images/teaser/teaser3_vid3.mp4" type="video/mp4">
+            </video>
             <center>
             <p>
-              <i>Place I can pee.</i>
+              <i>Walking in the sidewalk.</i>
             </p>
           </center>
         </div>
       </div>
       </div>
       <br>
-      <h2 class="subtitle has-text-centered">
-      <strong>SOLE</strong> is highly generalizable and can segment corresponding instances with various language instructions.
+      <h2 class="subtitle has-text-centered" style="margin-top: -2rem;">
+      Based on our SEAL, we further propose <strong>SEAL++</strong> that supports 1) <i>prompt-free</i>, 2) <i>spatiotemporal</i>, Open-Vocabulary Events Instance Segmentation (OV-EIS). Left video shows the class-agnostic detection from SEAL++. Two videos on the right present the spatiotemporal OV-EIS.
+    </h2>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+
+      <!-- Affordances 1 -->
+      <div class="column">
+        <div class="content"> 
+          <video autoplay loop muted>
+                <source src="./static/images/teaser/teaser4_vid1.mp4" type="video/mp4">
+            </video>
+            <center>
+            <p>
+              Scene 1.
+            </p>
+          </center>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content"> 
+          <video autoplay loop muted>
+                <source src="./static/images/teaser/teaser4_vid2.mp4" type="video/mp4">
+            </video>
+            <center>
+            <p>
+              Scene 2.
+            </p>
+          </center>
+        </div>
+      </div>
+      </div>
+      <br>
+      <h2 class="subtitle has-text-centered" style="margin-top: -2rem;">
+      Our SEAL++ also supports spatiotemporal OV-EIS with multiple semantics. <br> In the above demo, green color indicates <i>Vehicle</i> class and white color indicates <i>Human</i> class.
     </h2>
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="refrigerator" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/refrigerator.MP4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="mivrowave" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/microwave.MP4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="sofa" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sofa.MP4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="chair" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair.MP4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="light" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/light.MP4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="trashcan" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/trashcan_1.MP4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="trashcan" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/trashcan_2.MP4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -218,20 +263,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          In this paper, we investigate Open-Vocabulary 3D Instance Segmentation (OV-3DIS) with free-form language instructions. 
-          Earlier works that rely on only annotated base categories for training suffer from limited generalization to unseen novel categories. 
-          Recent works mitigate poor generalizability to novel categories by generating class-agnostic masks or projecting generalized masks 
-          from 2D to 3D, but disregard semantic or geometry information, leading to sub-optimal performance. Instead, generating generalizable 
-          but semantic-related masks directly from 3D point clouds would result in superior outcomes. 
-          In this paper, we introduce Segment any 3D Object with LanguagE (<strong>SOLE</strong>), 
-          which is a semantic and geometric-aware visual-language learning framework with strong generalizability 
-          by generating semantic-related masks directly from 3D point clouds. 
-          Specifically, we propose a multimodal fusion network to incorporate multimodal semantics in both backbone and decoder. 
-          In addition, to align the 3D segmentation model with various language instructions and enhance the mask quality, 
-          we introduce three types of multimodal associations as supervision. Our <strong>SOLE</strong> outperforms previous methods 
-          by a large margin on ScanNetv2, ScanNet200, and Replica benchmarks, and the results are even closed to the fully-supervised counterpart 
-          despite the absence of class annotations in the training. Furthermore, extensive qualitative results demonstrate the versatility of 
-          our SOLE to language instructions.
+          Scene understanding with free-form language has been widely explored within diverse modalities such as images, point clouds, and LiDAR. However, related studies on event sensors are scarce or narrowly centered on semantic-level understanding. We introduce <strong>SEAL</strong>, the first Semantic-aware Segment Any Events framework that addresses Open-Vocabulary Event Instance Segmentation (OV-EIS). Given the visual prompt, our model presents a unified framework to support both event segmentation and open-vocabulary mask classification at multiple levels of granularity, including instance-level and part-level. To enable thorough evaluation on OV-EIS, we curate four benchmarks that cover <i>label granularity</i> from coarse to fine class configurations and <i>semantic granularity</i> from instance-level to part-level understanding. Extensive experiments show that our SEAL largely outperforms proposed baselines in terms of performance and inference speed with a parameter-efficient architecture. In the Appendix, we further present a simple variant of our SEAL achieving generic spatiotemporal OV-EIS that does not require any visual prompts from users in the inference. The code will be publicly available.
         </div>
       </div>
     </div>
@@ -239,276 +271,10 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-       
-        <h2 class="title is-3">Overall Framework</h2>
-    
-      <br>
-        <div class="content has-text-justified">
-          <p>
-            <strong>Overall framework of SOLE.</strong> SOLE is built on transformer-based instance segmentation model with multimodal adaptations. 
-            For model architecture, backbone features are integrated with per-point CLIP features and subsequently fed into the cross-modality decoder (CMD). 
-            CMD aggregates the point-wise features and textual features into the instance queries, finally segmenting the instances, which are supervised by multimodal associations. 
-            During inference, predicted mask features are combined with the per-point CLIP features, enhancing the open-vocabulary performance.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-        <div class="content">
-          <img src="static/images/overall.png"
-            class="interpolation-image">
-        </div>
-      </div>
-
-<div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-    
-      <br>
-        <div class="content has-text-justified">
-          <p>
-            <strong>Three types of multimodal association instance.</strong> For each ground truth instance mask, we first pool the per-point CLIP features to obtain Mask-Visual Association $\mathbf{f}^{\mathrm{MVA}}$. 
-            Subsequently, $\mathbf{f}^{\mathrm{MVA}}$ is fed into CLIP space captioning model to generate caption and corresponding textual feature $\mathbf{f}^{\mathrm{MCA}}$ for each mask, termed as Mask-Caption Association. 
-            Finally, noun phrases are extracted from mask caption and the embeddings of them are aggregated via multimodal attention to get Mask-Entity Association $\mathbf{f}^{\mathrm{MEA}}$. 
-            The three multimodal associations are used for supervising SOLE to acquire the ability to segment 3D objects with free-form language instructions.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-        <div class="content">
-          <img src="static/images/mla.png"
-            class="interpolation-image">
-        </div>
-      </div>
-</div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-       
-        <h2 class="title is-3">Quantitative Results</h2>
-    
-      <br>
-        <div class="content has-text-justified">
-          <p>
-            <strong>The comparison of closed-set 3D instance segmentation setting on ScanNetv2.</strong> SOLE is compared with class-split methods, mask-training methods and the full-supervised counterpart (upper bound). 
-            SOLE outperforms all the OV-3DIS methods and achieves competitive results with the fully-supervised model.  
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-        <div class="content">
-          <img src="static/images/tab1.png"
-            class="interpolation-image">
-        </div>
-      </div>
-<div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-    
-      <br>
-        <div class="content has-text-justified">
-          <p>
-            <strong>The comparison of closed-set 3D instance segmentation setting on ScanNet200.</strong> SOLE is compared with OpenMask3D on the overall segmentation performance and on each subset. 
-            SOLE significantly outperforms OpenMask3D on five out of the six evaluation metrics.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-        <div class="content">
-          <img src="static/images/tab2.png"
-            class="interpolation-image">
-        </div>
-      </div>
-<div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-    
-      <br>
-        <div class="content has-text-justified">
-          <p>
-            <strong>The comparison of hierarchical open-set 3D instance segmentation setting on ScanNetv2→ScanNet200.</strong> 
-            SOLE is compared with OpenMask3D on both base and novel classes and achieves the best results.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-        <div class="content">
-          <img src="static/images/tab3.png"
-            class="interpolation-image">
-        </div>
-      </div>
-  
-<div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-    
-      <br>
-        <div class="content has-text-justified">
-          <p>
-            <strong>The comparison of open-set 3D instance segmentation setting on ScanNet200→Replica.</strong>
-            SOLE outperforms OpenMask3D on all the evaluation metrics.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-        <div class="content">
-          <img src="static/images/tab4.png"
-            class="interpolation-image">
-        </div>
-      </div>
-</div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-       
-        <h2 class="title is-3">Qualitative results</h2>
-    
-      <br>
-        <div class="content has-text-justified">
-          <p>
-            Our <strong>SOLE</strong> demonstrates open-vocabulary capability by effectively responding to free-form language queries, including visual questions, attributes description and functional description.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-
-      <!-- Affordances 1 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/tv.png"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i>I want to watch movie.</i>
-            </p>
-          </center>
-        </div>
-      </div>
-      <!--/ Affordances 1 -->
-
-      <!-- Affordances 2 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/window.png"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i>I wanna see outside.</i>
-            </p>
-          </center>
-        </div>
-      </div>
-    <!--/ Affordances 2 -->
-  </div>
-
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-
-      <!-- Affordances 1 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/chairs.png"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i>Chairs near by the window.</i>
-            </p>
-          </center>
-        </div>
-      </div>
-      <!--/ Affordances 1 -->
-
-      <!-- Affordances 2 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/brown.png"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i>Brown furnitures.</i>
-            </p>
-          </center>
-        </div>
-      </div>
-    <!--/ Affordances 2 -->
-  </div>
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-
-      <!-- Affordances 1 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/trashcan.png"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i>Throwing away the garbage.</i>
-            </p>
-          </center>
-        </div>
-      </div>
-      <!--/ Affordances 1 -->
-
-      <!-- Affordances 2 -->
-      <div class="column">
-        <div class="content">
-          
-          <img src="static/images/vending.png"
-            class="interpolation-image">
-            <center>
-            <p>
-              <i>I'm hungry.</i>
-            </p>
-          </center>
-        </div>
-      </div>
-    <!--/ Affordances 2 -->
-  </div>
-</section>
-
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{lee2024segment,
-      title = {Segment Any 3D Object with Language}, 
-      author = {Lee, Seungjun and Zhao, Yuyang and Lee, Gim Hee},
-      year = {2024},
-      journal   = {arXiv preprint arXiv:2404.02157},
-}</code></pre>
+    <pre><code></code></pre>
   </div>
 </section>
 
