@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+  
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Segment any 3D Object with Language">
+  <meta name="keywords" content="open-set, 3D instance segmentation, multimodal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOLE 🐾</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SOLE 🐾<br/>
+            <p class="title is-3 publication-title">Segment Any 3D Object with Language</p>
+          </h1>
+          <h1 class="title is-4" style="color: #D21F3C;">ICLR 2025</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/seungjun-lee-43101a261/">Seungjun Lee</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://yuyangzhao.com">Yuyang Zhao</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="margin-right: 1em;">National University of Singapore</span><br>
+             <span class="author-block" style="margin-right: 1em; font-size: 18px;"><sup>*</sup>Equal contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (More Results)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.02157"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/CVRP-SOLE/SOLE"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+
+      <!-- Affordances 1 -->
+      <div class="column">
+        <div class="content"> 
+          <img src="static/images/sink.png" class="interpolation-image">
+            <center>
+            <p>
+              <i>Where can I wash my hands?</i>
+            </p>
+          </center>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content"> 
+          <img src="static/images/desktop.png" class="interpolation-image">
+            <center>
+            <p>
+              <i>Device to play game.</i>
+            </p>
+          </center>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content"> 
+          <img src="static/images/toilet.png" class="interpolation-image">
+            <center>
+            <p>
+              <i>Place I can pee.</i>
+            </p>
+          </center>
+        </div>
+      </div>
+      </div>
+      <br>
+      <h2 class="subtitle has-text-centered">
+      <strong>SOLE</strong> is highly generalizable and can segment corresponding instances with various language instructions.
+    </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="refrigerator" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/refrigerator.MP4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="mivrowave" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/microwave.MP4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="sofa" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/sofa.MP4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="chair" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair.MP4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="light" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/light.MP4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="trashcan" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/trashcan_1.MP4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="trashcan" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/trashcan_2.MP4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          In this paper, we investigate Open-Vocabulary 3D Instance Segmentation (OV-3DIS) with free-form language instructions. 
+          Earlier works that rely on only annotated base categories for training suffer from limited generalization to unseen novel categories. 
+          Recent works mitigate poor generalizability to novel categories by generating class-agnostic masks or projecting generalized masks 
+          from 2D to 3D, but disregard semantic or geometry information, leading to sub-optimal performance. Instead, generating generalizable 
+          but semantic-related masks directly from 3D point clouds would result in superior outcomes. 
+          In this paper, we introduce Segment any 3D Object with LanguagE (<strong>SOLE</strong>), 
+          which is a semantic and geometric-aware visual-language learning framework with strong generalizability 
+          by generating semantic-related masks directly from 3D point clouds. 
+          Specifically, we propose a multimodal fusion network to incorporate multimodal semantics in both backbone and decoder. 
+          In addition, to align the 3D segmentation model with various language instructions and enhance the mask quality, 
+          we introduce three types of multimodal associations as supervision. Our <strong>SOLE</strong> outperforms previous methods 
+          by a large margin on ScanNetv2, ScanNet200, and Replica benchmarks, and the results are even closed to the fully-supervised counterpart 
+          despite the absence of class annotations in the training. Furthermore, extensive qualitative results demonstrate the versatility of 
+          our SOLE to language instructions.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+       
+        <h2 class="title is-3">Overall Framework</h2>
+    
+      <br>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Overall framework of SOLE.</strong> SOLE is built on transformer-based instance segmentation model with multimodal adaptations. 
+            For model architecture, backbone features are integrated with per-point CLIP features and subsequently fed into the cross-modality decoder (CMD). 
+            CMD aggregates the point-wise features and textual features into the instance queries, finally segmenting the instances, which are supervised by multimodal associations. 
+            During inference, predicted mask features are combined with the per-point CLIP features, enhancing the open-vocabulary performance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="content">
+          <img src="static/images/overall.png"
+            class="interpolation-image">
+        </div>
+      </div>
+
+<div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+    
+      <br>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Three types of multimodal association instance.</strong> For each ground truth instance mask, we first pool the per-point CLIP features to obtain Mask-Visual Association $\mathbf{f}^{\mathrm{MVA}}$. 
+            Subsequently, $\mathbf{f}^{\mathrm{MVA}}$ is fed into CLIP space captioning model to generate caption and corresponding textual feature $\mathbf{f}^{\mathrm{MCA}}$ for each mask, termed as Mask-Caption Association. 
+            Finally, noun phrases are extracted from mask caption and the embeddings of them are aggregated via multimodal attention to get Mask-Entity Association $\mathbf{f}^{\mathrm{MEA}}$. 
+            The three multimodal associations are used for supervising SOLE to acquire the ability to segment 3D objects with free-form language instructions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="content">
+          <img src="static/images/mla.png"
+            class="interpolation-image">
+        </div>
+      </div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+       
+        <h2 class="title is-3">Quantitative Results</h2>
+    
+      <br>
+        <div class="content has-text-justified">
+          <p>
+            <strong>The comparison of closed-set 3D instance segmentation setting on ScanNetv2.</strong> SOLE is compared with class-split methods, mask-training methods and the full-supervised counterpart (upper bound). 
+            SOLE outperforms all the OV-3DIS methods and achieves competitive results with the fully-supervised model.  
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="content">
+          <img src="static/images/tab1.png"
+            class="interpolation-image">
+        </div>
+      </div>
+<div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+    
+      <br>
+        <div class="content has-text-justified">
+          <p>
+            <strong>The comparison of closed-set 3D instance segmentation setting on ScanNet200.</strong> SOLE is compared with OpenMask3D on the overall segmentation performance and on each subset. 
+            SOLE significantly outperforms OpenMask3D on five out of the six evaluation metrics.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="content">
+          <img src="static/images/tab2.png"
+            class="interpolation-image">
+        </div>
+      </div>
+<div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+    
+      <br>
+        <div class="content has-text-justified">
+          <p>
+            <strong>The comparison of hierarchical open-set 3D instance segmentation setting on ScanNetv2→ScanNet200.</strong> 
+            SOLE is compared with OpenMask3D on both base and novel classes and achieves the best results.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="content">
+          <img src="static/images/tab3.png"
+            class="interpolation-image">
+        </div>
+      </div>
+  
+<div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+    
+      <br>
+        <div class="content has-text-justified">
+          <p>
+            <strong>The comparison of open-set 3D instance segmentation setting on ScanNet200→Replica.</strong>
+            SOLE outperforms OpenMask3D on all the evaluation metrics.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="content">
+          <img src="static/images/tab4.png"
+            class="interpolation-image">
+        </div>
+      </div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+       
+        <h2 class="title is-3">Qualitative results</h2>
+    
+      <br>
+        <div class="content has-text-justified">
+          <p>
+            Our <strong>SOLE</strong> demonstrates open-vocabulary capability by effectively responding to free-form language queries, including visual questions, attributes description and functional description.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      <!-- Affordances 1 -->
+      <div class="column">
+        <div class="content">
+          
+          <img src="static/images/tv.png"
+            class="interpolation-image">
+            <center>
+            <p>
+              <i>I want to watch movie.</i>
+            </p>
+          </center>
+        </div>
+      </div>
+      <!--/ Affordances 1 -->
+
+      <!-- Affordances 2 -->
+      <div class="column">
+        <div class="content">
+          
+          <img src="static/images/window.png"
+            class="interpolation-image">
+            <center>
+            <p>
+              <i>I wanna see outside.</i>
+            </p>
+          </center>
+        </div>
+      </div>
+    <!--/ Affordances 2 -->
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Affordances 1 -->
+      <div class="column">
+        <div class="content">
+          
+          <img src="static/images/chairs.png"
+            class="interpolation-image">
+            <center>
+            <p>
+              <i>Chairs near by the window.</i>
+            </p>
+          </center>
+        </div>
+      </div>
+      <!--/ Affordances 1 -->
+
+      <!-- Affordances 2 -->
+      <div class="column">
+        <div class="content">
+          
+          <img src="static/images/brown.png"
+            class="interpolation-image">
+            <center>
+            <p>
+              <i>Brown furnitures.</i>
+            </p>
+          </center>
+        </div>
+      </div>
+    <!--/ Affordances 2 -->
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Affordances 1 -->
+      <div class="column">
+        <div class="content">
+          
+          <img src="static/images/trashcan.png"
+            class="interpolation-image">
+            <center>
+            <p>
+              <i>Throwing away the garbage.</i>
+            </p>
+          </center>
+        </div>
+      </div>
+      <!--/ Affordances 1 -->
+
+      <!-- Affordances 2 -->
+      <div class="column">
+        <div class="content">
+          
+          <img src="static/images/vending.png"
+            class="interpolation-image">
+            <center>
+            <p>
+              <i>I'm hungry.</i>
+            </p>
+          </center>
+        </div>
+      </div>
+    <!--/ Affordances 2 -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{lee2024segment,
+      title = {Segment Any 3D Object with Language}, 
+      author = {Lee, Seungjun and Zhao, Yuyang and Lee, Gim Hee},
+      year = {2024},
+      journal   = {arXiv preprint arXiv:2404.02157},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            It borrows the source code of <a href="https://github.com/nerfies/nerfies.github.io">this website</a>.
+            We would like to thank Utkarsh Sinha and Keunhong Park.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
