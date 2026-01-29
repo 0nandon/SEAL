@@ -21,30 +21,6 @@ Segment Any Events with Language</h1>
     <li>
       <a href="#todo">TODO</a>
     </li>
-    <li>
-      <a href="#installation">Installation</a>
-    </li>
-    <li>
-      <a href="#data-preparation">Data Preparation</a>
-    </li>
-    <li>
-      <a href="#per-scene-optimization-of-diet-gs-stage-1">Per-scene Optimiazation of DiET-GS (Stage 1)</a>
-    </li>
-     <li>
-      <a href="#per-scene-optimization-of-diet-gs-stage-2">Per-scene Optimiazation of DiET-GS++ (Stage 2)</a>
-    </li>
-    <li>
-      <a href="#render-diet-gs-stage-1">Render DiET-GS (stage 1)</a>
-    </li>
-    <li>
-      <a href="#render-diet-gs-stage-2">Render DiET-GS++ (stage 2)</a>
-    </li>
-    <li>
-      <a href="#acknowledgement">Acknowledgement</a>
-    </li>
-    <li>
-      <a href="#citation">Citation</a>
-    </li>
   </ol>
 </details>
 
@@ -53,5 +29,5 @@ Segment Any Events with Language</h1>
 - [2026/01/26] SEAL is accepted to ICLR 2026 🔥. The code will be released before April.
 
 ## TODO
-- [x] Release the code of DiET-GS
-- [x] Release the code of DiET-GS++
+- [ ] Release the code of SEAL
+- [ ] Release the benchmarks
