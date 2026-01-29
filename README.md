@@ -20,7 +20,7 @@ Segment Any Events with Language</h1>
   </a>
 </p>
 <p align="center">
-Our <strong>SEAL</strong> is the first Semantic-aware Segment Any Events. 
+Our <strong>SEAL</strong> is the first Semantic-aware Segment Any Events model. 
 </p>
 </p>
 
