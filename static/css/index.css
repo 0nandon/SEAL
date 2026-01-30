@@ -156,13 +156,6 @@ body {
   border-radius: 5px;
 }
 
-.title{
-  font-size: 56px;
-  font-weight: 300;
-  color: #444;
-  margin: 0;
-}
-
 /* Gradient text */
 .seal{
   font-weight: 800;
