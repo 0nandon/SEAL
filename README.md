@@ -41,3 +41,8 @@ Our <strong>SEAL</strong> is the first Semantic-aware Segment Any Events model.
 ## TODO
 - [ ] Release the code of SEAL
 - [ ] Release the benchmarks
+
+## Citation
+If you find our code or paper useful, please cite
+```bibtex
+```
