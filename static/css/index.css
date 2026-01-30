@@ -155,3 +155,48 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.title{
+  font-size: 56px;
+  font-weight: 300;
+  color: #444;
+  margin: 0;
+}
+
+/* Gradient text */
+.seal{
+  font-weight: 800;
+  font-style: italic;
+  background: linear-gradient(90deg, #00c6ff, #7f00ff, #ff4ecd);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  /* Make it animate */
+  display: inline-block;
+  animation: sealGlow 1.1s ease-in-out infinite;
+}
+
+/* Blink / pulse + moving gradient */
+@keyframes sealGlow{
+  0%{
+    opacity: 1;
+    filter: drop-shadow(0 0 0px rgba(127,0,255,0.0));
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  50%{
+    opacity: 0.25; /* blink */
+    filter: drop-shadow(0 0 10px rgba(127,0,255,0.55));
+    background-position: 100% 50%;
+    transform: scale(1.03); /* tiny pulse */
+  }
+  100%{
+    opacity: 1;
+    filter: drop-shadow(0 0 0px rgba(127,0,255,0.0));
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+}
