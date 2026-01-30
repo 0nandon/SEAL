@@ -31,6 +31,9 @@ Our <strong>SEAL</strong> is the first Semantic-aware Segment Any Events model.
     <li>
       <a href="#todo">TODO</a>
     </li>
+    <li>
+      <a href="#citation">Citation</a>
+    </li>
   </ol>
 </details>
 
