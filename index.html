@@ -287,6 +287,68 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Contributions</h2>
+      <br>
+        <div class="content has-text-justified" style="margin-top: -2rem;">
+          <ol>
+            <li>For the first time, we address <strong><span style="color:#51b18d;">Open-Vocabulary Event Instance Segmentatino (OV-EIS)</span></strong> problem, an importnat yet largely overlooked research challenge.</li>
+            <li>We propose <strong><span style="color:#51b18d;">four types of simple baselines</span></strong> that enable OV-EIS and discuss their limitations.</li>
+            <li>Given the limitationsof the proposed baselines, we introduce <strong><span style="color:#51b18d;">SEAL</span></strong>, an advanced OV-EIS framework that achieves the best performance and fastest real-time inference speed with a lightweight architecture.</li>
+            <li>We propose <strong><span style="color:#51b18d;">four new benchmarks</span></strong> to thoroughly evaluate the OV-EIS with diverse scenarios.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+       
+        <h2 class="title is-3">Proposed Baselines</h2>
+    
+      <br>
+        <div class="content has-text-justified" style="margin-top: -1rem;">
+          <p><strong><span style="color:#5c66f0;">Four Types of Baseline under Three Categories.</span></strong> The three categories (AR-CDG, Hybrid, AF-DA) are designed as a baseline based on the strategy of transferring image-domain knowledge to the event domain. Refer to Sec. <strong><span style="color:#df6950;">3</span></strong> and Supplementary material Sec. <strong><span style="color:#df6950;">A.3</span></strong> for further details. Those proposed baselines have two limitations: <strong><span style="color:#df6950;">1)</span></strong> AR-CDG and Hybrid categories still suffer from a huge domain gap between image and events despite the E2VID reconstruction. <strong><span style="color:#df6950;">2)</span></strong> All baselines require two distinct backbones for mask generation and classification which degrades parameter and inference efficiency.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="content">
+          <img src="static/images/baseline.png"
+            class="interpolation-image">
+        </div>
+      </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+       
+        <h2 class="title is-3">Overall Framework of SEAL</h2>
+    
+      <br>
+        <div class="content has-text-justified" style="margin-top: -1rem;">
+          <p><strong><span style="color:#5c66f0;">Overall framework of SEAL.</span></strong> The MHSG module (<strong><i><span style="color:#df6950;">Red</span></i></strong> and <strong><i><span style="color:#51b18d;">Green</span></i></strong>) provides rich multimodal semantic guidance across multiple levels of granularity including part-level and instance-level. The multimodal fusion network of SEAL (<strong><span style="color:#5c66f0;"><i>Purple</span></i></strong>) enhances class prediction from a given binary mask by encoding rich semantic and spatial priors to produce a CLIP-aligned mask feature.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="content">
+          <img src="static/images/overall.png"
+            class="interpolation-image">
+        </div>
+      </div>
+</section>
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
