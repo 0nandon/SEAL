@@ -4,6 +4,15 @@ This is the repository that contains source code for the [SEAL website](https://
 
 If you find SEAL useful for your work please cite:
 ```
+@misc{lee2026segmenteventslanguage,
+      title={Segment Any Events with Language}, 
+      author={Seungjun Lee and Gim Hee Lee},
+      year={2026},
+      eprint={2601.23159},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.23159}, 
+}
 ```
 
 # Website License
