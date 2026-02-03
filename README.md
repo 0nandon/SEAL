@@ -48,4 +48,13 @@ Our <strong>SEAL</strong> is the first Semantic-aware Segment Any Events model.
 ## Citation
 If you find our code or paper useful, please cite
 ```bibtex
+@misc{lee2026segmenteventslanguage,
+      title={Segment Any Events with Language}, 
+      author={Seungjun Lee and Gim Hee Lee},
+      year={2026},
+      eprint={2601.23159},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.23159}, 
+}
 ```
