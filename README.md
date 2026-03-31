@@ -146,7 +146,7 @@ Training consists of two stages. We conduct the training in RTX A6000 Ada GPU.
 
 #### 1. Training events backbone
 
-You need to train events backbone by following the EventSAM. Enter the path to store the checkpoints in Line 94 of event_encoder/train_eventsam.py.
+You need to train events backbone by following the EventSAM. Enter the path to store the checkpoints in <a href="https://github.com/0nandon/SEAL/blob/064a50320dbb858769a4bf3101a940bc764c6bd9/event_encoder/train_eventsam.py#L94">here<a> of event_encoder/train_eventsam.py.
 ```
 python event_encoder/train_eventsam.py
 ```
