@@ -1,0 +1,87 @@
+hydra:
+  run:
+    dir: .
+  job_logging:
+    handlers:
+      file:
+        filename: /dev/null
+    root:
+      handlers: [console]
+    
+general:
+  gpu: 1
+  epoch: 10
+  iter_log: 10
+  eval_check: 100
+  checkpoint: cache/seal.pt
+  optimizer:
+    name: Adam
+    lr: 2e-4
+  scheduler:
+    name: ExponentialLR
+    gamma: 0.9
+    step: 3
+
+log:
+  dir: log/DDD17
+  name: seal.log
+
+dataset:
+  test:
+    name: DDD17
+    dir: dataset/metadata
+    batch_size: 1
+    data: ddd17_eval.txt
+    gt: instance_gt
+    img_width: 512
+    semantic_width: 256
+    shuffle: False
+    prompt: box
+    classifier: classifier/DDD17.pt
+  
+model:
+  mask_levels: ['l', 'm', 's']
+  num_mask_tokens: 0
+  output_dim: 768
+  roi: True
+  use_decoder: False
+  semantic_width: 256
+  backbone:
+    model_type: vit_b
+    input_signal: evimg
+    encoder_checkpoint: cache/eventsam.pth
+    decoder_checkpoint: cache/sam_vit_b_01ec64.pth
+  neck:
+    name: MultiLayerSAMTransformerNeck
+    input_size: [32, 32]
+    in_channels: 768
+    embed_channels: 256
+    out_channels: 256
+    depth: 6
+    global_attn_indexes: [5]
+    window_size: 14
+    num_heads: 16
+    mlp_ratio: 4
+    use_rel_pos: True
+    rel_pos_zero_init: True
+    multimodal_fusion: True
+    num_event_modality_prompt: 0
+    event_prompt_in_cross_attn: False
+  in_proj:
+    in_channels: 512
+  position:
+    embed_channels: 256
+  aggregate:
+    embed_channels: 256
+  roi_pool:
+    output_size: [7, 7]
+    spatial_scale: 1.0
+    sampling_ratio: -1
+    aligned: True
+  loss:
+    name: CosineSimilarity
+    reduction: mean
+    weight: 1.0
+    normalize: False
+    dim: -1
+

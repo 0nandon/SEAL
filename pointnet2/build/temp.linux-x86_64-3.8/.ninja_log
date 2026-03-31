@@ -1,0 +1,19 @@
+# ninja log v6
+20	18504	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/interpolate_gpu.o	97274acb157ffa22
+19	18682	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/group_points_gpu.o	d45acb27119ec3
+21	18835	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/sampling_gpu.o	e1058c10ef67717b
+13	18870	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/ball_query_gpu.o	3260ae2ccfb09571
+19	22458	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/group_points.o	c221ea255cc68fe
+20	22490	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/sampling.o	6d1a0fa4f42371f
+17	22656	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/bindings.o	ced391dd7de74b9f
+20	22752	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/interpolate.o	2e5bd06cde2f2530
+3	22773	1741950370524102451	/data/sjlee/EventSAM/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/ball_query.o	6554b817171abe03
+52	14718	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/ball_query_gpu.o	c47e7f7db4640393
+54	14873	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/interpolate_gpu.o	fffc0b6300191f4f
+54	14887	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/group_points_gpu.o	31a40d6814522aaf
+55	15023	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/sampling_gpu.o	663227b520e4910d
+53	18629	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/group_points.o	b3d4386637d3d496
+55	18754	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/sampling.o	d6658fad2cdaf6fa
+54	18828	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/interpolate.o	4e4e944348969f7f
+53	18891	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/bindings.o	ae2ee01d80fcb1e5
+48	21636	1774440312712433936	/dataset/sjlee/code/SEAL/pointnet2/build/temp.linux-x86_64-3.8/_ext_src/src/ball_query.o	23e697c5a105f001
