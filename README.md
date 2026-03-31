@@ -16,7 +16,7 @@ Segment Any Events with Language</h1>
 
 <p align="center">
   <a href="">
-    <img src="static/teaser.png" alt="Logo" width="100%">
+    <img src="https://github.com/0nandon/SEAL/blob/main/static/teaser.png" alt="Logo" width="100%">
   </a>
 </p>
 <p align="center">
