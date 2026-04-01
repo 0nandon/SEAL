@@ -179,7 +179,7 @@ python event_encoder/test_seal.py --config-path=../configs/eval/{DATASET} --conf
 
 ## Demo
 
-Try our interactive demo!
+Try our interactive demo! If you click the thumbnail below, you can watch our demo video.
 
 [![Watch](static/thumbnail.png)](https://www.youtube.com/watch?v=Y-REEXTN_yQ)
 
@@ -190,7 +190,7 @@ Our demo supports:
 
 Run the command below:
 ```
-python gradio_seal.py --config configs/eval/DSEC19/seal.yaml --checkpoint cache/seal.pt --data-root dataset_/data/DSEC/test --server-port 7860
+python gradio_seal.py --config configs/eval/DSEC19/seal.yaml --checkpoint cache/seal.pt --data-root dataset/data/DSEC/test --server-port 7860
 ```
 
 ## Acknowledgement
