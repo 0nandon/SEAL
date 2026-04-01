@@ -184,6 +184,12 @@ Try our interactive demo!
   <source src="static/demo.mp4" type="video/mp4">
 </video>
 
+Our demo supports:
+* Segment/classify instances with box prompts
+* Segment/classify instances with point prompts
+* Retrieve the masks based on the open-vocabulary queries. In this case, pre-defined box prompts are provided as candidates following Sec. B.5 of main paper.
+
+Run the command below:
 ```
 python gradio_seal.py --config configs/eval/DSEC19/seal.yaml --checkpoint cache/seal.pt --data-root dataset_/data/DSEC/test --server-port 7860
 ```
