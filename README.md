@@ -58,7 +58,7 @@ Our <strong>SEAL</strong> is the first Semantic-aware Segment Any Events model.
 
 - [2026/01/26] SEAL is accepted to ICLR 2026 🔥. The code will be released before April.
 - [2026/03/31] Code for SEAL and instance segmentation benchmarks are released 👊🏻! Interactive demo is coming soon.
-- [2026/04/01] Interactive demo of SEAL is released! Enter the box, points and text, and interact with events stream.
+- [2026/04/01] Interactive demo of SEAL is released 👊🏻! Enter the box, points and text, and interact with events stream.
 
 ## TODO
 - [x] Release the code of SEAL
