@@ -125,10 +125,10 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="columns is-centered">
-      <div class="column">
-        <div class="content"> 
-          <img src="static/images/teaser/teaser-9.png" class="interpolation-image">
-        </div>
+      <div class="column" style="margin-top: -2rem;">
+        <video id="teaser-video" autoplay loop muted playsinline style="width: 80%; height: auto; display: block; margin: 0 auto; border-radius: 16px; overflow: hidden;">
+          <source src="./static/images/demo.mp4" type="video/mp4">
+        </video>
       </div>
       </div>
       <br>
@@ -619,6 +619,21 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    const teaserVideo = document.getElementById("teaser-video");
+    if (!teaserVideo) return;
+
+    teaserVideo.addEventListener("mouseenter", function () {
+      teaserVideo.setAttribute("controls", "");
+    });
+
+    teaserVideo.addEventListener("mouseleave", function () {
+      teaserVideo.removeAttribute("controls");
+    });
+  })();
+</script>
 
 </body>
 </html>
